@@ -73,14 +73,16 @@ public class GameManager : MonoBehaviour
         {
             case EstadoJuego.Calibrando:
 
-                if (Input.GetKeyDown(KeyCode.W))
+               // if (Input.GetKeyDown(KeyCode.W))
+                if (InputManager.Instance.GetAxis("Vertical0") >= 0.5f)
                 {
                     Player1.Seleccionado = true;
                 }
 
                 if (twoPlayers)
                 {
-                    if (Input.GetKeyDown(KeyCode.UpArrow))
+                    //if (Input.GetKeyDown(KeyCode.UpArrow))
+                    if (InputManager.Instance.GetAxis("Vertical1") >= 0.5f)
                     {
                         Player2.Seleccionado = true;
                     }

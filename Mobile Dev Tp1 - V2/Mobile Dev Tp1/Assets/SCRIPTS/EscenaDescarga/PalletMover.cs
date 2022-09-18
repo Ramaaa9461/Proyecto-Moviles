@@ -2,57 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PalletMover : ManejoPallets
+public class PalletMover : ManejoPallets 
 {
-
-    public MoveType miInput;
-    public enum MoveType
-    {
-        WASD,
-        Arrows
-    }
+    public string playerID = "-1";
 
     public ManejoPallets Desde, Hasta;
     bool segundoCompleto = false;
 
     private void Update()
     {
-        switch (miInput)
+        if (!Tenencia() && Desde.Tenencia() && Left())
         {
-            case MoveType.WASD:
-                if (!Tenencia() && Desde.Tenencia() && Input.GetKeyDown(KeyCode.A))
-                {
-                    PrimerPaso();
-                }
-                if (Tenencia() && Input.GetKeyDown(KeyCode.S))
-                {
-                    SegundoPaso();
-                }
-                if (segundoCompleto && Tenencia() && Input.GetKeyDown(KeyCode.D))
-                {
-                    TercerPaso();
-                }
-
-                break;
-
-
-            case MoveType.Arrows:
-                if (!Tenencia() && Desde.Tenencia() && Input.GetKeyDown(KeyCode.LeftArrow))
-                {
-                    PrimerPaso();
-                }
-                if (Tenencia() && Input.GetKeyDown(KeyCode.DownArrow))
-                {
-                    SegundoPaso();
-                }
-                if (segundoCompleto && Tenencia() && Input.GetKeyDown(KeyCode.RightArrow))
-                {
-                    TercerPaso();
-                }
-                break;
-            default:
-                break;
+            PrimerPaso();
         }
+        if (Tenencia() && Down())
+        {
+            SegundoPaso();
+        }
+        if (segundoCompleto && Tenencia() && Right())
+        {
+            TercerPaso();
+        }
+    }
+
+    bool Down()
+    {
+        return InputManager.Instance.GetAxis("Vertical" + playerID) > 0.5f;
+    }
+    bool Up()
+    {
+        return InputManager.Instance.GetAxis("Vertical" + playerID) < -0.5f;
+    }
+    bool Left()
+    {
+        return InputManager.Instance.GetAxis("Horizontal" + playerID) < -0.5f;
+    }
+    bool Right()
+    {
+        return InputManager.Instance.GetAxis("Horizontal" + playerID) > 0.5f;
     }
 
     void PrimerPaso()
