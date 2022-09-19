@@ -34,8 +34,4 @@ public class SetDificulty : MonoBehaviour
 
     }
 
-    void Update()
-    {
-
-    }
 }

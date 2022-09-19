@@ -25,7 +25,6 @@ public class SceneController : MonoBehaviour
     public void goToMenu()
     {
         SceneManager.LoadScene("Menu");
-
     }
 
     public void Exit()

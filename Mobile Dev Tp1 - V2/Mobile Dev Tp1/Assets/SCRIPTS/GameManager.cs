@@ -73,7 +73,6 @@ public class GameManager : MonoBehaviour
         {
             case EstadoJuego.Calibrando:
 
-               // if (Input.GetKeyDown(KeyCode.W))
                 if (InputManager.Instance.GetAxis("Vertical0") >= 0.5f)
                 {
                     Player1.Seleccionado = true;
@@ -81,7 +80,6 @@ public class GameManager : MonoBehaviour
 
                 if (twoPlayers)
                 {
-                    //if (Input.GetKeyDown(KeyCode.UpArrow))
                     if (InputManager.Instance.GetAxis("Vertical1") >= 0.5f)
                     {
                         Player2.Seleccionado = true;
@@ -197,28 +195,42 @@ public class GameManager : MonoBehaviour
 
         TiempoDeJuego = 0;
 
-        //if (Player1.Dinero > Player2.Dinero) {
-        //    //lado que gano
-        //    if (Player1.LadoActual == Visualizacion.Lado.Der)
-        //        DatosPartida.LadoGanadaor = DatosPartida.Lados.Der;
-        //    else
-        //        DatosPartida.LadoGanadaor = DatosPartida.Lados.Izq;
-        //    //puntajes
-        //    DatosPartida.PtsGanador = Player1.Dinero;
-        //    DatosPartida.PtsPerdedor = Player2.Dinero;
-        //}
-        //else
-        //{
-        //    //lado que gano
-        //    if (Player2.LadoActual == Visualizacion.Lado.Der)
-        //        DatosPartida.LadoGanadaor = DatosPartida.Lados.Der;
-        //    else
-        //        DatosPartida.LadoGanadaor = DatosPartida.Lados.Izq;
+        if (twoPlayers)
+        {
+            if (Player1.Dinero > Player2.Dinero)
+            {
+                //lado que gano
+                if (Player1.LadoActual == Visualizacion.Lado.Der)
+                    DatosPartida.LadoGanadaor = DatosPartida.Lados.Der;
+                else
+                    DatosPartida.LadoGanadaor = DatosPartida.Lados.Izq;
+                //puntajes
+                DatosPartida.PtsGanador = Player1.Dinero;
+                DatosPartida.PtsPerdedor = Player2.Dinero;
+            }
+            else
+            {
+                //lado que gano
+                if (Player2.LadoActual == Visualizacion.Lado.Der)
+                    DatosPartida.LadoGanadaor = DatosPartida.Lados.Der;
+                else
+                    DatosPartida.LadoGanadaor = DatosPartida.Lados.Izq;
 
-        //    //puntajes
-        //    DatosPartida.PtsGanador = Player2.Dinero;
-        //    DatosPartida.PtsPerdedor = Player1.Dinero;
-        //}
+                //puntajes
+                DatosPartida.PtsGanador = Player2.Dinero;
+                DatosPartida.PtsPerdedor = Player1.Dinero;
+            }
+        }
+        else
+        {
+            if (Player1.LadoActual == Visualizacion.Lado.Der)
+                DatosPartida.LadoGanadaor = DatosPartida.Lados.Der;
+
+            DatosPartida.PtsGanador = Player1.Dinero;
+            DatosPartida.PtsPerdedor = 0;
+            
+
+        }
 
         Player1.GetComponent<Frenado>().Frenar();
         if (twoPlayers)
