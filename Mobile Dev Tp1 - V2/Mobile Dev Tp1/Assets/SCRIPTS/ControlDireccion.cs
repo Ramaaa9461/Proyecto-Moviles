@@ -2,9 +2,6 @@ using UnityEngine;
 
 public class ControlDireccion : MonoBehaviour
 {
-    public enum TipoInput { AWSD, Arrows }
-    public TipoInput InputAct = TipoInput.AWSD;
-
     float Giro = 0;
 
     public bool Habilitado = true;

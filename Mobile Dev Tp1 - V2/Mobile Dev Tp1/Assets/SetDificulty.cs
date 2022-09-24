@@ -12,7 +12,7 @@ public class SetDificulty : MonoBehaviour
 
     private void Awake()
     {
-        difficulty = GameObject.Find("Difficulty").GetComponent<Difficulty>();
+        difficulty = GameObject.Find("Difficulty").GetComponent<Difficulty>();  
     }
     void Start()
     {

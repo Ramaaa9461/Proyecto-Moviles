@@ -491,8 +491,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 333843912}
-        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+      - m_Target: {fileID: 1518186298}
+        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
         m_MethodName: goToCredis
         m_Mode: 1
         m_Arguments:
@@ -616,49 +616,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173947515}
   m_CullTransparentMesh: 1
---- !u!1 &333843911
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 333843913}
-  - component: {fileID: 333843912}
-  m_Layer: 0
-  m_Name: Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &333843912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333843911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6112ea74056802440868f7d9ec634547, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &333843913
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333843911}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960, y: 666, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &404352348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,8 +1052,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 333843912}
-        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+      - m_Target: {fileID: 1518186298}
+        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
@@ -1378,8 +1335,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1037201747}
-        m_TargetAssemblyTypeName: Difficulty, Assembly-CSharp
+      - m_Target: {fileID: 1518186298}
+        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
         m_MethodName: SetDifficultyHard
         m_Mode: 1
         m_Arguments:
@@ -1562,49 +1519,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875373392}
   m_CullTransparentMesh: 1
---- !u!1 &1037201746
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1037201748}
-  - component: {fileID: 1037201747}
-  m_Layer: 0
-  m_Name: Difficulty
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1037201747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037201746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f2617c1754518743b4087507fc9dbb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1037201748
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037201746}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1127857902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1704,8 +1618,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1037201747}
-        m_TargetAssemblyTypeName: Difficulty, Assembly-CSharp
+      - m_Target: {fileID: 1518186298}
+        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
         m_MethodName: SetDifficultyMedium
         m_Mode: 1
         m_Arguments:
@@ -2048,8 +1962,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 333843912}
-        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+      - m_Target: {fileID: 1518186298}
+        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
         m_MethodName: goToTwoPlayerGameplay
         m_Mode: 1
         m_Arguments:
@@ -2378,6 +2292,7 @@ GameObject:
   - component: {fileID: 1518186296}
   - component: {fileID: 1518186295}
   - component: {fileID: 1518186294}
+  - component: {fileID: 1518186298}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2470,6 +2385,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1518186298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518186293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a025c962a868f2a47b9202b29de23e82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1570844112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2569,8 +2496,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1037201747}
-        m_TargetAssemblyTypeName: Difficulty, Assembly-CSharp
+      - m_Target: {fileID: 1518186298}
+        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
         m_MethodName: SetDifficultyEasy
         m_Mode: 1
         m_Arguments:
@@ -3228,8 +3155,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 333843912}
-        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+      - m_Target: {fileID: 1518186298}
+        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
         m_MethodName: goToSinglePlayerGameplay
         m_Mode: 1
         m_Arguments:

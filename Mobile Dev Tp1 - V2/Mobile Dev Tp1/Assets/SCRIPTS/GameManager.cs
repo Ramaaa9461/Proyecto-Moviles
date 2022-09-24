@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     public Player Player2;
 
 
-
     bool ConteoRedresivo = true;
     public Rect ConteoPosEsc;
     public float ConteoParaInicion = 3;
@@ -43,10 +42,14 @@ public class GameManager : MonoBehaviour
     public GameObject[] ObjsCarrera;
 
     //--------------------------------------------------------//
+    SceneController sceneController;
+
 
     void Awake()
     {
         GameManager.Instancia = this;
+        sceneController = GameObject.Find("Scene_Controller").GetComponent<SceneController>();
+
     }
 
     IEnumerator Start()
@@ -57,18 +60,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        //REINICIAR
-        if (Input.GetKey(KeyCode.Alpha0))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-
-        //CIERRA LA APLICACION
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
-
         switch (EstAct)
         {
             case EstadoJuego.Calibrando:
@@ -140,7 +131,10 @@ public class GameManager : MonoBehaviour
 
                 TiempEspMuestraPts -= Time.deltaTime;
                 if (TiempEspMuestraPts <= 0)
-                    SceneManager.LoadScene("EndScreen");
+                {
+                    // SceneManager.LoadScene("EndScreen");
+                    sceneController.goToEndScreen();
+                }
 
                 break;
         }
@@ -228,7 +222,7 @@ public class GameManager : MonoBehaviour
 
             DatosPartida.PtsGanador = Player1.Dinero;
             DatosPartida.PtsPerdedor = 0;
-            
+
 
         }
 
@@ -378,4 +372,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void PauseGame()
+    {
+        sceneController.PauseGame();
+    }
+        public void ResumeGame()
+    {
+        sceneController.ResumeGame();
+    }
+
+    public void BackToMenu()
+    {
+        ResumeGame();
+        sceneController.goToMenu();
+    }
 }

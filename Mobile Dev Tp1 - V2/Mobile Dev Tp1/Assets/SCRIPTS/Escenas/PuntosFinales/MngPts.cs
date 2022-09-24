@@ -15,8 +15,14 @@ public class MngPts : MonoBehaviour
    
 
     Visualizacion Viz = new Visualizacion();
+    SceneController sceneController;
 
     //---------------------------------//
+    private void Awake()
+    {
+        sceneController = GameObject.Find("Scene_Controller").GetComponent<SceneController>();
+    }
+
     void Start()
     {
 
@@ -36,14 +42,24 @@ public class MngPts : MonoBehaviour
         if (DatosPartida.LadoGanadaor == DatosPartida.Lados.Izq)//izquierda
         {
             firstPlayerText.text = "$" + Viz.PrepararNumeros(DatosPartida.PtsGanador);
+            secondPlayerText.text = "$" + Viz.PrepararNumeros(DatosPartida.PtsPerdedor);
             WinPlayer1.SetActive(true);
         }
         else
         {
-            secondPlayerText.text = "$" + Viz.PrepararNumeros(DatosPartida.PtsPerdedor);
+            secondPlayerText.text = "$" + Viz.PrepararNumeros(DatosPartida.PtsGanador);
+            firstPlayerText.text = "$" + Viz.PrepararNumeros(DatosPartida.PtsPerdedor);
             WinPlayer2.SetActive(true);
         }
 
+
+
+
+    }
+
+    public void BackToMenu()
+    {
+        sceneController.goToMenu();
     }
 
 }

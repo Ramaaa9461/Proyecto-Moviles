@@ -440,65 +440,6 @@ MonoBehaviour:
   firstPlayerText: {fileID: 265489451}
   WinPlayer1: {fileID: 979689623}
   WinPlayer2: {fileID: 1922658134}
-  TiempEmpAnims: 2.5
-  DineroPos:
-  - {x: 18, y: 85}
-  - {x: 56.3, y: 85}
-  DineroEsc: {x: 35, y: 18}
-  GS_Dinero: {fileID: 11400000, guid: 18658b36fb1334a42a49c5419c5eba93, type: 2}
-  GanadorPos: {x: 0, y: 0}
-  GanadorEsc: {x: 100, y: 21}
-  Ganadores:
-  - {fileID: 2800000, guid: c3d86ea90a1cd5449a861d39906d5d9a, type: 3}
-  - {fileID: 2800000, guid: 0a3b339c0051ccd4897e8fb9aaf36835, type: 3}
-  GS_Ganador: {fileID: 11400000, guid: 095e25161e48b3f4fb19542efe9d14c1, type: 2}
-  Fondo: {fileID: 0}
-  TiempEspReiniciar: 15
-  TiempParpadeo: 0.3
-  ActivadoAnims: 0
---- !u!1 &105540738
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 105540740}
-  - component: {fileID: 105540739}
-  m_Layer: 0
-  m_Name: Scene_Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &105540739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105540738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6112ea74056802440868f7d9ec634547, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &105540740
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105540738}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &186670131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,9 +1347,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 105540739}
-        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: goToMenu
+      - m_Target: {fileID: 23}
+        m_TargetAssemblyTypeName: MngPts, Assembly-CSharp
+        m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
