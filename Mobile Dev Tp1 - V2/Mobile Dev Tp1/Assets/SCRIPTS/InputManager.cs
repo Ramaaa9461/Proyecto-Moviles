@@ -52,7 +52,7 @@ public class InputManager
 
 #elif UNITY_STANDALONE
 
-        return GetOrAddAxis(axis);
+        return GetOrAddAxis(axis)  + Input.GetAxis(axis);
 #endif
 
     }

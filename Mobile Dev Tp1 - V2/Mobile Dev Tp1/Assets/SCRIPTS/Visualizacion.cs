@@ -67,19 +67,12 @@ public class Visualizacion : MonoBehaviour
             case Player.Estados.EnConduccion:
                 //inventario
                 SetInv();
-                //contador de dinero
-                
-				//SetDinero();
                 break;
 
             case Player.Estados.EnDescarga:
                 //inventario
                 SetInv();
-                //el bonus
-                SetBonus();
-                //contador de dinero
-                
-				//SetDinero();
+               SetBonus();
                 break;
 
             case Player.Estados.EnTutorial:
