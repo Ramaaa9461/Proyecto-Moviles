@@ -68,7 +68,8 @@ public class Visualizacion : MonoBehaviour
                 //inventario
                 SetInv();
                 //contador de dinero
-                SetDinero();
+                
+				//SetDinero();
                 break;
 
             case Player.Estados.EnDescarga:
@@ -77,7 +78,8 @@ public class Visualizacion : MonoBehaviour
                 //el bonus
                 SetBonus();
                 //contador de dinero
-                SetDinero();
+                
+				//SetDinero();
                 break;
 
             case Player.Estados.EnTutorial:
@@ -164,7 +166,7 @@ public class Visualizacion : MonoBehaviour
 	
 	void SetDinero()
 	{
-        Dinero.text = PrepararNumeros(Pj.Dinero);
+		Dinero.text = PrepararNumeros(Pj.Dinero);
     }
 	
 	void SetTuto()

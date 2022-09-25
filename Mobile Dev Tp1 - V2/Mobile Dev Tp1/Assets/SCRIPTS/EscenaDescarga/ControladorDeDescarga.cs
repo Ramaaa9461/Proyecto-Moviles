@@ -1,9 +1,11 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class ControladorDeDescarga : MonoBehaviour 
 {
 	System.Collections.Generic.List<Pallet.Valores> Ps = new System.Collections.Generic.List<Pallet.Valores>();
+	public StringEvent moneyUpdater;
 	
 	int Contador = 0;
 	
@@ -144,6 +146,7 @@ public class ControladorDeDescarga : MonoBehaviour
 		Contador--;
 		
 		Pj.Dinero += (int)Bonus;
+		moneyUpdater.Invoke(PrepararNumeros(Pj.Dinero));
 		
 		if(Contador <= 0)
 		{
@@ -197,5 +200,43 @@ public class ControladorDeDescarga : MonoBehaviour
 		Dep.Soltar();
 		
 	}
-	
+
+	public string PrepararNumeros(int dinero)
+	{
+		string strDinero = dinero.ToString();
+		string res = "";
+
+		if (dinero < 1)//sin ditero
+		{
+			res = "";
+		}
+		else if (strDinero.Length == 6)//cientos de miles
+		{
+			for (int i = 0; i < strDinero.Length; i++)
+			{
+				res += strDinero[i];
+
+				if (i == 2)
+				{
+					res += ".";
+				}
+			}
+		}
+		else if (strDinero.Length == 7)//millones
+		{
+			for (int i = 0; i < strDinero.Length; i++)
+			{
+				res += strDinero[i];
+
+				if (i == 0 || i == 3)
+				{
+					res += ".";
+				}
+			}
+		}
+
+		return res;
+	}
+
 }
+

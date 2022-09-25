@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour 
 {
+	public StringEvent MoneyUpdated;
 	public int Dinero = 0;
 	public int IdPlayer = 0;
 	
@@ -44,7 +46,11 @@ public class Player : MonoBehaviour
 		{
 			Bolasas[CantBolsAct] = b;
 			CantBolsAct++;
+
 			Dinero += (int)b.Monto;
+			string money = MiVisualizacion.PrepararNumeros(Dinero);
+			MoneyUpdated.Invoke(money);
+
 			b.Desaparecer();
 			return true;
 		}
